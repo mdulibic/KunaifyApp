@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Kunaify" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFFFFF</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimaryDark" tools:targetApi="23">@color/colorPrimaryDark</item>
+        <item name="materialButtonStyle">@style/CustomBtn</item>
+        <item name="editTextStyle">@style/CustomInputField</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="colorAccent">@color/btnColor</item>
+    </style>
+
+    <style name="CustomBtn" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/btn_primary</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="CustomInputField" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/et_primary</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

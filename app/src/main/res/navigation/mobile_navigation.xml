@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_exchange">
+
+    <fragment
+        android:id="@+id/navigation_exchange"
+        android:name="com.example.kunaify.view.ExchangeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_exchange" />
+
+    <fragment
+        android:id="@+id/navigation_euro_cent_list"
+        android:name="com.example.kunaify.view.EuroCentsListFragment"
+        tools:layout="@layout/fragment_euro_cents_list" />
+</navigation>
