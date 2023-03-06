@@ -1,5 +1,5 @@
 # Kunaify
-Android application as part of a Android crashcourse held by me for the student association EESTEC LC Zagreb
+Android application as part of a Android crashcourse for the student association EESTEC LC Zagreb
 
 ![image](https://user-images.githubusercontent.com/65249525/223206429-942d77c9-739c-4b8c-bcf7-68cd9d7de749.png)
 
