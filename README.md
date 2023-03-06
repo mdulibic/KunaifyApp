@@ -1,13 +1,13 @@
 # Kunaify
-Android application as part of a Android crashcourse for the student association EESTEC LC Zagreb
+Android application as part of a Android crash course for the student association EESTEC LC Zagreb
 
 ![image](https://user-images.githubusercontent.com/65249525/223206429-942d77c9-739c-4b8c-bcf7-68cd9d7de749.png)
 
 ## Description
-- KN to EUR/EUR to KN converter
-- Kuna values euro cents hardcoded list
+- HRK to EUR/EUR to HRK converter
+- HRK values euro cents hardcoded list
 
-- Through this crashcourse, students learned the basics about Kotlin and Android developemnt
+- Through this crash course, students learned the basics about Kotlin and Android development
 - 4 lectures:
   - Kotlin and Android Basics
   - User input and interactions (part 1)
