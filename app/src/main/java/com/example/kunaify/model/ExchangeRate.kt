@@ -1,6 +1,6 @@
 package com.example.kunaify.model
 
 
-class ExchangeRate {
-    // TODO
+object ExchangeRate {
+    const val EUR_HRK = 7.5
 }
