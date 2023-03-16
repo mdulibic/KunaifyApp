@@ -10,6 +10,6 @@ Android application as part of a Android crash course for the student associatio
 - Through this crash course, students learned the basics about Kotlin and Android development
 - 4 lectures:
   - Kotlin and Android Basics
-  - User input and interactions (part 1)
-  - User input and interactions (part 2), display scrollable lists
+  - User input and interactions 
+  - Display scrollable lists
   - Connect to the internet
