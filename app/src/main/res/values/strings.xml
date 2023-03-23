@@ -8,5 +8,8 @@
     <string name="kunaify">Kunaify</string>
     <string name="kn">KN</string>
     <string name="eur">EUR</string>
+    <string name="lp">LP</string>
     <string name="convert">Convert</string>
+    <string name="euro_cents_list_title">Kuna values\n euro cents</string>
+    <string name="euro_cent_rate">%1$s %2$s = %3$s %4$s</string>
 </resources>
