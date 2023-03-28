@@ -1,10 +1,19 @@
 package com.example.kunaify.networking
 
-class ExchangeRepository(
-    private val kunaifyApiService: KunaifyApiService
-) {
+class ExchangeRepository {
 
-    suspend fun getExchangeRates() {
-        kunaifyApiService.getExchangeRates()
+    lateinit var retrofitInstance: KunaifyApiService
+    init {
+        initiateRetrofit()
+    }
+
+    private fun initiateRetrofit() {
+        retrofitInstance = RetrofitInstance
+            .getRetrofitInstance()
+            .create(KunaifyApiService::class.java)
+    }
+
+    suspend fun getExchangeRates(value: Double) {
+        retrofitInstance.getExchangeRates(value)
     }
 }

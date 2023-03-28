@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.kunaify.databinding.FragmentExchangeBinding
 import com.example.kunaify.viewModel.ExchangeViewModel
+import kotlinx.coroutines.runBlocking
 
 class ExchangeFragment : Fragment() {
 
@@ -52,7 +53,9 @@ class ExchangeFragment : Fragment() {
             viewModel.exchangeCurrencies()
         }
         binding.btnConvert.setOnClickListener {
-            viewModel.convert(value = binding.etAmount.text.toString().toDouble())
+            runBlocking {
+                viewModel.convert(value = binding.etAmount.text.toString().toDouble())
+            }
         }
     }
 

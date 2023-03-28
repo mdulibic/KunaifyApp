@@ -1,13 +1,10 @@
 package com.example.kunaify.networking
 
-import com.example.kunaify.model.ExhangeRateAPI
+import com.example.kunaify.model.ExchangeRateAPI
 import retrofit2.Response
 import retrofit2.http.*
 
-class KunaifyApiService {
-
-    @GET("api/v1/exchange-rates")
-    fun getExchangeRates(): Response<ExhangeRateAPI> {
-        return Response.success(ExhangeRateAPI(7.53450))
-    }
+interface KunaifyApiService {
+    @GET("/convert")
+    suspend fun getExchangeRates(@Query("value") value: Double): Response<ExchangeRateAPI>
 }
