@@ -54,7 +54,11 @@ class ExchangeFragment : Fragment() {
         }
         binding.btnConvert.setOnClickListener {
             runBlocking {
-                viewModel.convert(value = binding.etAmount.text.toString().toDouble())
+                viewModel.convert(
+                    value = binding.etAmount.text.toString().toDouble(),
+                    from = getString(viewModel.fromCurrency.value!!.name),
+                    to = getString(viewModel.toCurrency.value!!.name),
+                )
             }
         }
     }

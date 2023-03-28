@@ -6,9 +6,17 @@ import androidx.lifecycle.ViewModel
 import com.example.kunaify.model.Currency
 import com.example.kunaify.networking.ExchangeRepository
 
-class ExchangeViewModel(
-    private val exchangeRepository: ExchangeRepository
-) : ViewModel() {
+class ExchangeViewModel: ViewModel() {
+
+    private lateinit var exchangeRepository: ExchangeRepository
+
+    init {
+        initializeRepo()
+    }
+
+    private fun initializeRepo() {
+        exchangeRepository = ExchangeRepository()
+    }
 
     private val _fromCurrency = MutableLiveData<Currency>(Currency.Euro)
     val fromCurrency: LiveData<Currency>
@@ -30,7 +38,19 @@ class ExchangeViewModel(
         }
     }
 
-    suspend fun convert(value: Double) {
-        exchangeRepository.getExchangeRates(value)
+    suspend fun convert(
+        value: Double,
+        from: String,
+        to: String,
+    ) {
+        exchangeRepository.getExchangeRates(value, from, to).let {
+            if (it.isSuccessful) {
+                _convertedValue.value = it.body()?.result
+            }
+            else {
+                _convertedValue.value = 0.0
+            }
+        }
+
     }
 }
