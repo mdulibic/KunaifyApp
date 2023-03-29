@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit
  */
 object RetrofitBuilder {
 
-    private const val BASE_URL = "https://api.apilayer.com/"
+    private const val BASE_URL = "https://api.apilayer.com/exchangerates_data/"
     private const val API_KEY = "R3IOT3TtqBPkwwaORLQflZ8U9cwev1U7"
 
     /**

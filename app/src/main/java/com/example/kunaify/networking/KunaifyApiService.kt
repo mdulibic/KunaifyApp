@@ -5,7 +5,7 @@ import retrofit2.Response
 import retrofit2.http.*
 
 interface KunaifyApiService {
-    @GET("/exchangerates_data/convert")
+    @GET("convert")
     suspend fun getExchangeRates(
         @Query("to") to: String,
         @Query("from") from: String,
