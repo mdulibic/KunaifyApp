@@ -44,7 +44,7 @@ class ExchangeFragment : Fragment() {
             binding.tvCurrencyTo.text = requireContext().getText(it.name)
         }
         viewModel.convertedValue.observe(viewLifecycleOwner) {
-            binding.tvConverted.text = it.toString()
+            binding.tvConverted.text = it
         }
     }
 
@@ -53,13 +53,9 @@ class ExchangeFragment : Fragment() {
             viewModel.exchangeCurrencies()
         }
         binding.btnConvert.setOnClickListener {
-            runBlocking {
-                viewModel.convert(
-                    value = binding.etAmount.text.toString().toDouble(),
-                    from = getString(viewModel.fromCurrency.value!!.name),
-                    to = getString(viewModel.toCurrency.value!!.name),
-                )
-            }
+            viewModel.convert(
+                value = binding.etAmount.text.toString().toDouble(),
+            )
         }
     }
 
